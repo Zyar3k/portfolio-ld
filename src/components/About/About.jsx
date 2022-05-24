@@ -1,5 +1,5 @@
 import React from "react";
-import Award from "../../../img/award.png";
+import Award from "../../img/award.png";
 import "./About.css";
 
 const About = () => {
@@ -9,7 +9,7 @@ const About = () => {
         <div className="a-card bg"></div>
         <div className="a-card">
           <img
-            src="https://images.pexels.com/photos/339379/pexels-photo-339379.jpeg?cs=srgb&dl=pexels-marek-339379.jpg&fm=jpg"
+            src="https://images.pexels.com/photos/1540983/pexels-photo-1540983.jpeg?cs=srgb&dl=pexels-suliman-sallehi-1540983.jpg&fm=jpg"
             alt=""
             className="a-img"
           />
