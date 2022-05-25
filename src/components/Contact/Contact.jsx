@@ -5,9 +5,14 @@ import Email from "../../img/email.png";
 import Address from "../../img/address.png";
 import emailjs from "emailjs-com";
 
+import { ThemeContext } from "../../context";
+
 const Contact = () => {
   const formRef = useRef();
   const [done, setDone] = useState(false);
+
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
@@ -56,26 +61,26 @@ const Contact = () => {
           </p>
           <form ref={formRef} onSubmit={handleSubmit}>
             <input
-              style={{ backgroundColor: "#333" }}
               type="text"
+              style={{ backgroundColor: darkMode && "#333" }}
               placeholder="Name"
               name="user_name"
             />
             <input
-              style={{ backgroundColor: "#333" }}
               type="text"
+              style={{ backgroundColor: darkMode && "#333" }}
               placeholder="Subject"
               name="user_subject"
             />
             <input
-              style={{ backgroundColor: "#333" }}
               type="text"
+              style={{ backgroundColor: darkMode && "#333" }}
               placeholder="Email"
               name="user_email"
             />
             <textarea
-              style={{ backgroundColor: "#333" }}
               rows="5"
+              style={{ backgroundColor: darkMode && "#333" }}
               placeholder="Message"
               name="message"
             />
